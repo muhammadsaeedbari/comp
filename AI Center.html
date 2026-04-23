@@ -1,217 +1,161 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helphub AI Dashboard</title>
+    <link rel="stylesheet" href="AiCenterDone.css" />
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container nav-containe logo">
+        <div class="d-flex align-items-center m-0 gap-2">
+          <h2 class="logo-icon m-0">H</h2>
+          <strong>HelpHub AI</strong>
+        </div>
+
+        <div class="nav-links">
+          <a href="index.html">Dashboard</a>
+          <a href="OnboardingPage.html">Onboarding</a>
+          <a href="profileDone.html">Profile</a>
+          <a href="AiCenter.html" active>AI Center</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="d-flex flex-column gap-4">
+      <!-- Navigation -->
+
+      <section class="profile-header container">
+        <span>INTERACTION / MESSAGING</span>
+        <h1>See what the platform intelligence is noticing.</h1>
+        <p class="m-0">
+          AI-like insights summarize demand trends, helper readiness, urgency
+          signals, and request recommendations.
+        </p>
+      </section>
+
+      <!-- Stats Grid -->
+      <!-- <div class="stats-grid"> -->
+      <div class="d-flex container p-0 gap-3">
+        <div class="stat-card w-25">
+          <p class="card-label">TREND PULSE</p>
+          <h2>Web Development</h2>
+          <p>Most common support area based on active community requests.</p>
+        </div>
+        <div class="stat-card w-25">
+          <p class="card-label">URGENCY WATCH</p>
+          <div class="stat-number">2</div>
+          <p>
+            Requests currently flagged high priority by the urgency detector.
+          </p>
+        </div>
+        <div class="stat-card w-25">
+          <p class="card-label">MENTOR POOL</p>
+          <div class="stat-number">2</div>
+          <p>
+            Trusted helpers with strong response history and contribution
+            signals.
+          </p>
+        </div>
+      </div>
+
+      <!-- Recommendations Section -->
+      <!-- Main Grid -->
+      <section class="container p-0">
+        <div class="notificationbox">
+          <p class="green">LIVE UPDATES</p>
+          <h1>Notification Feed</h1>
+
+          <div class="d-flex flex-column gap-2">
+            <div class="notifocation p-3">
+              <div class="p-2">
+                <p><b>Need help</b></p>
+                <span class="m-0">
+                  <span class="fw-semibold text-secondary"
+                    >AI summary: Web Development request with high urgency. Best
+                    suited for members with relevant expertise.
+                  </span>
+                </span>
+              </div>
+              <div class="tags">
+                <span class="tag">Web Development</span>
+                <span class="tag">High</span>
+              </div>
+            </div>
+            <!--============================================-->
+
+            <div class="notifocation p-3">
+              <div class="p-2">
+                <p><b>Need help making my portfolio responsive before demo day</b></p>
+                <span class="m-0">
+                  <span class="fw-semibold text-secondary">Responsive layout issue with a short deadline. Best helpers are frontend mentors comfortable with CSS grids and media queries.
+                  </span>
+                </span>
+              </div>
+              <div class="tags">
+                <span class="tag">Web Development</span>
+                <span class="tag">High</span>
+              </div>
+            </div>
+            <!--============================================-->
 
 
-body{
-  /* height: 100%; */
+            <div class="notifocation p-3">
+              <div class="p-2">
+                <p><b>Looking for Figma feedback on a volunteer event poster</b></p>
+                <span class="m-0">
+                  <span class="fw-semibold text-secondary">A visual design critique request where feedback on hierarchy, spacing, and messaging would create the most value.
 
-  min-height: 100vh;
-
-    background-image: 
-    linear-gradient(to bottom right, #e0e9dc, transparent), /* Top Left */
-    linear-gradient(to bottom left, #f6e4c9, transparent),  /* Top Right */
-    linear-gradient(to top right, #efe7da, transparent),    /* Bottom Left */
-    linear-gradient(to top left, #efe7da, transparent);     /* Bottom Right */
-
-  background-position: 
-    top left, 
-    top right, 
-    bottom left, 
-    bottom right;
-
-  background-size: 100% ;
-  background-repeat: no-repeat;
-
-}
+                  </span>
+                </span>
+              </div>
+              <div class="tags">
+                <span class="tag">Design</span>
+                <span class="tag">Medium</span>
+              </div>
+            </div>
+            <!--============================================-->
 
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allows wrapping on very small screens */
-    gap: 15px;
-    background-color: #f7f3e9;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-}
-
-.logo-icon {
-    
-    width: 36px;
-    height: 36px;
-    background: linear-gradient(135deg, #477c6a, #07b07b);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.nav-links a{
-    text-decoration: none;
-    color: #9ea2a2;
-    border-radius: 50px;
-
-    
-    padding: 12px 25px;
-    font-weight: 600;
-}
-
-.nav-links a:hover , .nav-links a[active]{
-  background-color: #dce2d5;
-  color: #13ab9c;
-}
+            <div class="notifocation p-3">
+              <div class="p-2">
+                <p><b>Need mock interview support for internship applications</b></p>
+                <span class="m-0">
+                  <span class="fw-semibold text-secondary">Career coaching request focused on confidence-building, behavioral answers, and entry-level frontend interviews.
+                  </span>
+                </span>
+              </div>
+              <div class="tags">
+                <span class="tag">Career</span>
+                <span class="tag">Low</span>
+              </div>
+            </div>
+            <!--============================================-->
 
 
-.profile-header{
-  margin:30px;
-  padding:40px;
-  padding-left: 30px !important;
-  border-radius:20px;
-  background:linear-gradient(to right,#1c2b2e,#2f3f42);
-  color:white;
-} 
-
-.profile-header h1{
-    font-size: 3rem;
-    font-family: sans-serif;
-    font-weight: 600;
-    color: #fff;
-}
-
-.profile-header span{
-    letter-spacing: 2px;
-    color: #9ea2a2;
-}
-
-.profile-header p{
-    color: #9ea2a2;
-}
-.my-container{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:20px;
-  padding: 30px 0px !important;
-
-}
-
-
-.green{
-    color: #13ab9c;
-    font-weight: 550;
-    letter-spacing: 0.1rem;
-}
-
-
-.notificationbox{
-  border-radius: 25px;
-  padding: 32px;
-  background-color: #fefaf1;
-  gap: 24px;
- 
-}
-
-.notifocation{
-  background-color: #fefdfb;
-  border: 1px solid rgb(235, 231, 231);
-  border-radius: 25px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-
-}
-
-
-.tags {
-  display: flex;
-  gap: 10px;
- 
-}
-
-.tag {
-  background: #e9f2ee; /* Light green pill color */
-  color: #28795f;
-  padding: 8px 16px;
-  border-radius: 50px;
-  font-size: 1rem;
-}
-
-
-
-.stat-card {
-    background-color: #fefaf1;
-    padding: 25px;
-    border-radius: 20px;
-    min-height: 200px;
-}
-.stat-card .card-label {
-    color: #047553;
-    font-weight: 550;
-    letter-spacing: 0.1rem;
-} 
-
-.stat-card h2 { font-size: 24px; margin-bottom: 15px; }
-.stat-number { font-size: 32px; font-weight: 700; margin-bottom: 15px; }
-.stat-card p { font-size: 14px; color: var(--text-muted); line-height: 1.4; }
-
-/* Recommendations Container */
-.recommendations {
-    background: var(--card-bg);
-    padding: 40px;
-    border-radius: 24px;
-}
-
-.label-blue {
-    color: #3b6bcf;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
-}
-
-.section-title { font-size: 32px; margin-bottom: 30px; }
-
-/* Request Cards */
-.request-card {
-    background: #fcfcfc;
-    border: 1px solid #efefef;
-    padding: 24px;
-    border-radius: 16px;
-    margin-bottom: 16px;
-}
-
-.request-card h3 { font-size: 16px; margin-bottom: 8px; }
-.request-card p { font-size: 14px; color: #777; margin-bottom: 16px; line-height: 1.5; }
-
-/* Tags */
-.tags { display: flex; gap: 10px; }
-.tag {
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.tag.web { background: #e8f4f1; color: #4a7479; }
-.tag.design { background: #fff5e6; color: #b37d00; }
-.tag.career { background: #f3f0ff; color: #6a4ecf; }
-.tag.high { background: #f0f7f7; color: #4a7479; }
-.tag.medium { background: #f0f7f7; color: #4a7479; }
-.tag.low { background: #f0f7f7; color: #4a7479; }
-
-
+          
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"
+  ></script>
+</html>
