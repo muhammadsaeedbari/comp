@@ -4,65 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="messag.css">
+    <title>Message Page</title>
+    <link rel="stylesheet" href="messageDone.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body class="bdy">
+<body>
 
-    <div class="navbar">
-        <div class="logo">
-            <div class="logo-box">H</div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-containe logo">
+        <div class="d-flex align-items-center m-0 gap-2">  
+        <h2 class="logo-icon m-0">H</h2>
             <strong>HelpHub AI</strong>
-        </div>
+            </div>
 
         <div class="nav-links">
-            <a class="text" href="#">Dashboard</a>
-            <a class="text" href="explore.html">Explore</a>
-            <a class="text text1" href="messag.html" class="active">Messages</a>
+        <a href="index.html">Dashboard</a>
+        <a href="OnboardingPage.html">Onboarding</a>
+        <a href="profileDone.html" >Profile</a>
+        </div>
+        </div>
+    </nav>
+
+
+    
+<div class="container ">
+    
+ 
+  <!-- Profile Header -->
+  <section class="profile-header container">
+    <span>INTERACTION / MESSAGING</span>
+    <h1> Keep support moving through direct communication.</h1>
+    <p class="m-0">Basic messaging gives helpers and requesters a clear follow-up path once a match happens.</p>
+  </section>
+
+  <!-- Main Grid -->
+  <section class="my-container container">
+
+    <!-- Left Card -->
+    <div class="my-card">
+
+        <p class="green">INTERACTION / MESSAGING</p>
+
+      <h1 class="fw-bold">Skills</h1>
+        
+       <div class="d-flex flex-column gap-2">
+
+        <div class="d-flex justify-content-between align-items-center notifocation p-3">
+          <div class="p-2"> 
+            <h5 ><b>Ayesha Khan → Sara Noor</b></h5>
+              <span class="m-0 fw-semibold text-secondary fs-5 pe-5 ">I checked your portfolio request. Share the breakpoint screenshots and I can suggest fixes.</span> 
+
+          </div>
+          <div><button class="notificationbtn p-2 ps-4 pe-4 m-4">11:45 <p class="m-0">AM</p></button></div>
         </div>
 
-        <div class="hero">
-            <h1>Keep support moving through direct communication.</h1>
-            <p>Basic messaging gives helpers and requesters a clear follow-up path once a match happens.</p>
+        <div class="d-flex justify-content-between align-items-center notifocation p-3">
+          <div class="p-2"> 
+            <h5><b>Hassan Ali → Ayesha Khan</b></h5>
+              <span class="m-0 fw-semibold text-secondary fs-5 pe-5 ">Your event poster concept is solid. I would tighten the CTA and reduce the background texture.</span> 
+                
+              
+          </div>
+          <div><button class="notificationbtn p-2 ps-4 pe-4 m-4">11:45 <p class="m-0">AM</p></button></div>
         </div>
 
+       
+        
 
-        <div class="my-container">
 
-            <div class="card">
-                <h2>Recent messages</h2>
+        
 
-                <div class="message">
-                    <strong>Ayesha Khan → Sara Noor</strong>
-                    <p>I checked your portfolio request. Share the breakpoint screenshots and I can suggest fixes.</p>
-                    <small>09:45 AM</small>
-                </div>
-
-                <div class="message">
-                    <strong>Hassan Ali → Ayesha Khan</strong>
-                    <p>Your event poster concept is solid. I would tighten the CTA and reduce the background texture.
-                    </p>
-                    <small>11:10 AM</small>
-                </div>
-
-            </div>
-
-            <div class="card">
-                <h3>Start a conversation</h3>
-
-                <form>
-                    <label>To</label>
-                    <input type="text" placeholder="Ayesha Khan">
-
-                    <label>Message</label>
-                    <textarea placeholder="Share support details, ask for files, or suggest next steps."></textarea>
-
-                    <button>Send</button>
-                </form>
-            </div>
         </div>
+
+    </div>
+
+    <!-- Right Card -->
+    <div class="my-card card2">
+        <p class="green">SEND MESSAGE</p>
+      <div class="heading-content">
+        <h2>Start a conversation</h2>
+      </div>
+
+      <div class="input-field">
+        <div class="top-field">
+            <div class="first w-100 d-flex flex-column gap-2">
+        <label >Category</label>
+        
+          <select class=" SelectOpt">
+            <option selected>Ayesha Khan</option>
+            <option value="1">HAssan Ali</option>
+            <option value="2">Sara Khan</option>
+          </select>
+
+      </div>
+        
+        </div>
+       <div class="first d-flex flex-column gap-2">
+        <label>Message</label>
+        <textarea class=" w-100 mytextarea "placeholder="Share support details, ask for files, or suggest next steps."></textarea>
+      </div>
+      
+      </div>
+
+      <button class="buttonSave">Save profile</button>
+    </div>
+
+  </section>
+
+</div>
+  
+
+
+
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
